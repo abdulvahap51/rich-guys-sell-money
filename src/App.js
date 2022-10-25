@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Selectinput from "./pages/Selectrichspage"
+import Homepage from "./pages/Homepages"
+import { Routes,Route } from "react-router-dom";
+import Cryptomarketing from "./pages/Cryptomarketing";
+import Marketing from "./pages/Marketing";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+
+
+
+
+
+<Routes>
+      <Route path="/" element={<Selectinput />} />
+      <Route path="/cart" element={< Homepage/>} />
+      <Route path="/crypto" element={< Cryptomarketing/>} />
+      <Route path="/marketing" element={< Marketing/>} />
+      
+      
+    </Routes>
+    </>
   );
 }
 
